@@ -31,8 +31,7 @@ input.onButtonPressed(Button.B, function () {
     if (("comando" as any) == ("cerrar ventana" as any)) {
         pins.analogWritePin(AnalogPin.P8, 90)
         basic.showString("¨v¨")
+        record.playAudio(record.BlockingState.Blocking)
+        basic.clearScreen()
     }
-    record.startRecording(record.BlockingState.Blocking)
-    record.playAudio(record.BlockingState.Blocking)
-    basic.clearScreen()
 })
